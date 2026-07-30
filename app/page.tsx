@@ -7,18 +7,22 @@ import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious}
 
 export default function Home() {
   const trabajosRealizados =[{
+    id:1,
     src:"/carrusel/Carrusel1.webp",
     alt:"Vision M",
   },
   {
+    id:2,
     src:"/carrusel/Carrusel4.webp",
     alt:"Vision M Dark",
   },
   {
+    id:3,
     src:"/carrusel/Hero4.webp",
     alt:"Vision M Dark",
   },
   {
+    id:4,
     src:"/carrusel/Carrusel6.webp",
     alt:"Vision M Dark"
   },
