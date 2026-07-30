@@ -127,4 +127,20 @@
   html {
     @apply font-sans;
   }
+  h1 {
+    @apply text-6xl md:text-7xl font-extrabold tracking-tight;
+  }
+
+  h2 {
+    @apply text-4xl md:text-5xl font-bold tracking-tight text-gray-900;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold text-gray-900;
+  }
+
+  p {
+    @apply text-lg leading-8 text-gray-600;
+  }
+  
 }

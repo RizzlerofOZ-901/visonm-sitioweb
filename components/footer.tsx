@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer(){
     return(
@@ -12,8 +13,17 @@ export default function Footer(){
                         <span>Vision M</span>
                     </div>
                     {/*Redes sociales*/}
-                    <div className="flex items-center">
-                        <span>Redes sociales</span>
+                    <div className="flex gap-2">
+                        <div className="flex items-center">
+                            <Link href="https://www.facebook.com/visionm.com.mx">
+                                <Image src="/redes/facebook.png" alt="Logo" width={100} height={100} className="h-8 w-8"/>
+                            </Link>
+                        </div>
+                        <div className="flex items-center">
+                            <Link href="https://wa.me/528131724849">
+                                <Image src="/redes/Whatsapp.png" alt="Logo" width={100} height={100} className="h-8 w-8"/>
+                            </Link>
+                        </div>
                     </div>
                 </div>
                 {/*Copyright*/}
