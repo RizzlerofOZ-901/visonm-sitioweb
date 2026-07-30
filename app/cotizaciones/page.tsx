@@ -140,8 +140,8 @@ export default function Cotizaciones(){
             </Card>      
 {/*Tarjeta para informacion de contacto*/}
 <section>
-      <div className="container mx-auto max-w-7xl px-6 flex pb-20">
-        <div className="mx-auto flex max-w-5xl gap-8">
+      <div className="container mx-auto max-w-7xl px-6 pb-20">
+        <div className="mx-auto flex max-w-5xl flex-col gap-8 lg:flex-row">
             <Card className="flex-1 rounded-2xl bg-gray-50">
                     <CardHeader className="space-y-1">
                         <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[#FFBF00]">Contacto</span>
@@ -201,7 +201,7 @@ export default function Cotizaciones(){
                         </CardContent>
                     </form>
                 </Card>
-                <div className="flex-1 overflow-hidden rounded-3xl shadow-xl">
+                <div className="h-87.5 flex-1 overflow-hidden rounded-3xl shadow-xl lg:h-auto">
                     <iframe className="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224.6559084494007!2d-100.20551249511718!3d25.721154592250283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662eb555e7fa979%3A0xc832327d80626dcf!2sACEROS%20CASTA%C3%91EDA!5e0!3m2!1ses-419!2smx!4v1785345812780!5m2!1ses-419!2smx" 
                         loading="lazy" referrerPolicy="strict-origin-when-cross-origin">
                     </iframe>
