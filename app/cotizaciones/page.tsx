@@ -15,6 +15,7 @@ export default function Cotizaciones(){
         const[email, setEmail] = useState("");
         const[celular, setCelular] = useState("");
         const[comentario, setComentario] = useState("");
+        const[success, setSuccess] = useState("");
 
         const [error, setError] = useState("");
         const [loading, setLoading] = useState(false);
@@ -22,6 +23,7 @@ export default function Cotizaciones(){
         async function handleSubmit(e: React.FormEvent<HTMLFormElement>){
             e.preventDefault();
             setError("");
+            setSuccess("");
             setLoading(true);
 
             try{
@@ -37,10 +39,21 @@ export default function Cotizaciones(){
                     email,
                     celular,
                     comentario
-                 }),   
+                 }),
                 });
                 const data = await response.json();
                 console.log(data);
+
+                setSuccess("¡Tu solicitud fue enviada correctamente! Nos pondremos en contacto contigo pronto.");
+
+        // Clear form
+                setNombre("");
+                setApellido("");
+                setEmpresa("");
+                setEmail("");
+                setCelular("");
+                setComentario(""); 
+
             } catch (err){
                 setError("Un error inesperado ha ocurrido")
             } finally{
@@ -105,8 +118,23 @@ export default function Cotizaciones(){
                             />
                         </div>
                     </CardContent>
-                    <CardFooter className="text-center">
-                        <Button variant="ghost" className="bg-black text-white hover:bg-[#FFBF00]" type="submit">Enviar</Button>
+                    <CardFooter className="flex flex-col gap-4">
+                        {success && (
+                            <span className="w-full rounded-lg bg-green-100 p-4 text-center text-green-700">{success}</span>
+                        )}
+
+                        {error && (
+                            <span className="w-full rounded-lg bg-red-100 p-4 text-center text-red-700">{error}</span>
+                        )}
+
+                        <Button 
+                            disabled={loading} 
+                            variant="ghost" 
+                            className="bg-black text-white hover:bg-[#FFBF00]" 
+                            type="submit"
+                        >
+                            {loading ? "Enviando..." : "Enviar solicitud"}
+                        </Button>
                     </CardFooter>
                 </form>
             </Card>      
